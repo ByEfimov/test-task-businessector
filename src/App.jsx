@@ -9,6 +9,7 @@ function App() {
   const [load, setLoad] = useState(true);
   const [showPage, setShowPage] = useState(10);
   const [filter, setFilter] = useState("");
+  const [lastsort, setLastsort] = useState("");
 
   async function dataload() {
     if (load === true) {
@@ -34,8 +35,11 @@ function App() {
         filter={filter}
         showPage={showPage}
         PostsData={PostsData}
+        setLastsort={setLastsort}
+        lastsort={lastsort}
       ></TableComp>
       <ButtonsComp
+        setLastsort={setLastsort}
         filter={filter}
         setShowPage={setShowPage}
         showPage={showPage}

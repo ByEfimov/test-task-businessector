@@ -1,8 +1,5 @@
-import { useState } from "react";
-
 function TableComp(props) {
-  const { PostsData, showPage, filter } = props;
-  const [lastsort, setLastsort] = useState("");
+  const { PostsData, showPage, filter, setLastsort, lastsort } = props;
 
   const filtredPosts = PostsData[0]
     ? PostsData.filter((post) => {

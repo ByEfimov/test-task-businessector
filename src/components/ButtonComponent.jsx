@@ -1,17 +1,20 @@
 function ButtonsComp(props) {
-  const { setShowPage, showPage, PostsData } = props;
+  const { setShowPage, showPage, PostsData, setLastsort } = props;
   function clickPrev() {
+    setLastsort("");
     if (showPage !== 10) {
       setShowPage(showPage - 10);
     }
   }
   function clickNext() {
+    setLastsort("");
     if (showPage !== PostsData.length) {
       setShowPage(showPage + 10);
     }
   }
 
   function HandlerClickPages(e) {
+    setLastsort("");
     if (e.target.textContent <= PostsData.length / 10) {
       setShowPage(e.target.textContent * 10);
     }
